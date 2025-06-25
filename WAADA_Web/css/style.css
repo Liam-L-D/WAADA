@@ -1,0 +1,74 @@
+/* ====================================== Navbar Section ===================================== */
+.navbar-light .navbar-nav .nav-link {
+  color: #000 !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #86363f !important; /* American Flag Red */
+}
+
+/* ====================================== Hero Section ===================================== */
+h1 {
+  font-weight: 700;
+}
+
+/* ====================================== Footer Section ===================================== */
+.footer-section {
+/*------- background-color: #393b6b;  American Flag Blue */
+  background-color: #86363f; /* American Flag Red */
+  color: white;
+  padding: 3rem 0 1rem;
+  font-size: 0.9rem;
+}
+
+/* Duan Studio footer link */
+.designer-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.duan-brand {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid white;
+  padding-bottom: 2px;
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.duan-brand:hover {
+  color: gold; 
+  border-color: gold;
+}
+
+/* Social media icons using <img> and flex gap layout */
+.footer-section .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-section .social-icons img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1); 
+  transition: transform 0.6s ease;
+}
+
+.footer-section .social-icons img:hover {
+  transform: scale(1.15); 
+}
+
+/* ============================================
+  Responsible Interface
+   ============================================ */
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll !important;
+  }
+}
