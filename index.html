@@ -1,217 +1,184 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<!-- Required Meta Tags -->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<!-- SEO Tags -->
-<title>Washington Arts and Design Association</title>
-<meta content="WAADA is a Maryland-based nonprofit organization committed to cultivating art appreciation in Chinese-American communities and supporting creative projects by Chinese artists, designers, and musicians." name="description"/>
-<!-- Favicon & Apple Icon -->
-<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
-<link href="images/apple-icon-180.png" rel="apple-touch-icon"/>
-<!-- Open Graph Meta (for Facebook & social sharing) -->
-<meta content="Washington Arts and Design Association (WAADA)" property="og:title">
-<meta content="Supporting Chinese-American artists, designers, and musicians through nonprofit initiatives." property="og:description"/>
-<meta content="https://www.washingtonaada.org/images/og-waada.jpg" property="og:image"/>
-<meta content="https://www.washingtonaada.org" property="og:url"/>
-<meta content="non_profit" property="og:type"/>
-<!-- Twitter Card Meta -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Washington Arts and Design Association" name="twitter:title"/>
-<meta content="Nonprofit support for Chinese-American arts and design projects." name="twitter:description"/>
-<meta content="https://www.washingtonaada.org/images/twitter-banner.jpg" name="twitter:image"/>
-<!-- Font Awesome for Social Media Icons -->
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-sV0btkVyM8qZLr5lRgW9C+jwPdzK7ipnz9vKqTzPV5Y4Z9yaPkfqHTdJ+5kW5ZBoKwGVNl+8ZEOjlfxwXp0VwA==" referrerpolicy="no-referrer" rel="stylesheet"/>
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<!-- Custom CSS -->
-<link href="css/style.css" rel="stylesheet"/>
-<!-- Structured Data: JSON-LD for SEO -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NonprofitOrganization",
-    "name": "Washington Arts and Design Association",
-    "url": "https://www.washingtonaada.org",
-    "logo": "https://www.washingtonaada.org/images/logo.png",
-    "description": "WAADA supports Chinese-American artists, designers, and musicians in cultivating creative expression and community engagement.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "7316 Olive Tree Ct",
-      "addressLocality": "Gaithersburg",
-      "addressRegion": "MD",
-      "postalCode": "20879",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://facebook.com/washingtonaada",
-      "https://instagram.com/washingtonaada"
-    ]
-  }
-</script>
-</meta>
-</head>
-
-<body>
-<!-- ============= Navigation Bar ============= -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">
-    <img src="images/waada-logo.png" alt="WAADA Logo" class="me-2" style="height: 40px; width: auto;" />
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- =============== Hero Section ============== -->
-<header class="parallax-section text-white text-center position-relative" style="
-  background: url('images/background/home-backgound1.webp') center center / cover no-repeat;
-  background-attachment: fixed;
-  min-height: 60vh;
-">
-
-  <div class="container position-relative z-2 py-5">
-    <h1 class="display-4 fw-bold">Bridging Cultures. Inspiring Minds. <br>Empowering Creators.</h1>
-  </div>
+  <!-- Meta & SEO -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Washington Arts and Design Association</title>
+  <meta name="description" content="WAADA is a Maryland-based nonprofit organization committed to cultivating art appreciation in Chinese-American communities and supporting creative projects by Chinese artists, designers, and musicians."/>
   
-  <!-- black overlay -->
-  <div style="
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-  "></div>
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" href="images/apple-icon-180.png"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Washington Arts and Design Association (WAADA)">
+  <meta property="og:description" content="Supporting Chinese-American artists, designers, and musicians through nonprofit initiatives."/>
+  <meta property="og:image" content="https://www.washingtonaada.org/images/og-waada.jpg"/>
+  <meta property="og:url" content="https://www.washingtonaada.org"/>
+  <meta property="og:type" content="non_profit"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Washington Arts and Design Association"/>
+  <meta name="twitter:description" content="Nonprofit support for Chinese-American arts and design projects."/>
+  <meta name="twitter:image" content="https://www.washingtonaada.org/images/twitter-banner.jpg"/>
+
+  <!-- Fonts & CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NonprofitOrganization",
+      "name": "Washington Arts and Design Association",
+      "url": "https://www.washingtonaada.org",
+      "logo": "https://www.washingtonaada.org/images/logo.png",
+      "description": "WAADA supports Chinese-American artists, designers, and musicians in cultivating creative expression and community engagement.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7316 Olive Tree Ct",
+        "addressLocality": "Gaithersburg",
+        "addressRegion": "MD",
+        "postalCode": "20879",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://facebook.com/washingtonaada",
+        "https://instagram.com/washingtonaada"
+      ]
+    }
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/waada-logo.png" alt="WAADA Logo" style="height: 40px;"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- ===================== Hero Section with Background Video and Overlay ===================== -->
+<header class="hero-video-section position-relative text-white text-center">
+  <!-- Background video -->
+  <video autoplay muted loop playsinline
+         class="position-absolute top-0 start-0 w-100 h-100"
+         style="object-fit: cover; z-index: -2;">
+    <source src="media/home.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay layer -->
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+       style="background: rgba(0, 0, 0, 0.5); z-index: -1;"></div>
+
+  <!-- Foreground content -->
+ <div class="container position-relative z-1 d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 75vh;">
+    <h1 class="display-3 fw-bold">Bridging Cultures. Inspiring Minds.<br>Empowering Creators.</h1>
+    <a class="btn btn-outline-light mt-4" href="about.html">Explore Our Mission</a>
+  </div>
 </header>
 
-<!-- ===================== About Preview Section=================== -->
-<section class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="mb-4 fw-bold" style="color: #86363f;">Our Mission</h2>
-    <p class="lead col-md-10 mx-auto text-start" style="color: #86363f;">
-      The Washington Arts and Design Association (WAADA) promotes cultural exchange and mutual understanding through art and design. We support creative projects and programs that connect diverse communities and inspire collaboration and innovation.
-    </p>
-  </div>
-</section>
-
-<!-- ==================== Sample Events Section ===================== -->
-<section class="parallax-section py-5 text-white position-relative" style="
-  background: url('images/background/home-backgound2.webp') center center / cover no-repeat;
-  background-attachment: fixed;
-  min-height: 80vh;
-">
-  <!-- black overlay -->
-  <div style="
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-  "></div>
-
-  <!-- text -->
-  <div class="container position-relative z-2">
-    <h2 class="text-center mb-4 fw-bold">Recent Initiatives</h2>
-    <div class="row text-center">
-      <div class="col-md-4 mb-4">
-        <img alt="Art Workshop" class="img-fluid rounded mb-2" src="images/events/event1.webp"/>
-        <h5>Creative Workshop Series</h5>
-        <p>Connecting emerging artists with experienced mentors and educators.</p>
+  <!-- Mission Section -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4 fw-bold" style="color: #86363f;">Our Mission</h2>
+      <p class="lead col-md-10 mx-auto text-start" style="color: #86363f;">
+        The Washington Arts and Design Association (WAADA) promotes cultural exchange and mutual understanding through art and design. We support creative projects and programs that connect diverse communities and inspire collaboration and innovation.
+      </p>
+    </div>
+  </section>
+  <!-- Events Preview Section -->
+  <section class="parallax-section py-5 text-white position-relative" style="background: url('images/background/home-backgound2.webp') center / cover no-repeat; background-attachment: fixed; min-height: 80vh;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1;"></div>
+    <div class="container position-relative z-2">
+      <h2 class="text-center mb-4 fw-bold">Recent Initiatives</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <img src="images/1.webp" alt="Art Workshop" class="img-fluid rounded mb-2" loading="lazy"/>
+          <h5>Creative Workshop Series</h5>
+          <p>Connecting emerging artists with experienced mentors and educators.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="images/2.webp" alt="Exhibition" class="img-fluid rounded mb-2" loading="lazy"/>
+          <h5>Community Art Exhibition</h5>
+          <p>Highlighting contemporary work from local Chinese-American creatives.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="images/3.webp" alt="Performance" class="img-fluid rounded mb-2" loading="lazy"/>
+          <h5>Cultural Performance Night</h5>
+          <p>Bringing music, design, and dance together in a community celebration.</p>
+        </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <img alt="Exhibition" class="img-fluid rounded mb-2" src="images/events/event2.webp"/>
-        <h5>Community Art Exhibition</h5>
-        <p>Highlighting contemporary work from local Chinese-American creatives.</p>
-      </div>
-      <div class="col-md-4 mb-4">
-        <img alt="Performance" class="img-fluid rounded mb-2" src="images/events/event3.webp"/>
-        <h5>Cultural Performance Night</h5>
-        <p>Bringing music, design, and dance together in a community celebration.</p>
+      <div class="text-center">
+        <a class="btn btn-outline-light mt-3" href="gallery.html">See All Events</a>
       </div>
     </div>
-    <div class="text-center">
-      <a class="btn btn-outline-light mt-3" href="events.html">See All Events</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4 text-md-start text-center">
+          <img src="images/waada-white-logo.png" alt="WAADA Logo" style="height: 60px;"/>
+          <p class="mb-1 fw-bold">WASHINGTON ARTS AND DESIGN ASSOCIATION</p>
+          <p class="mb-1">7316 Olive Tree Ct, Gaithersburg, MD 20879</p>
+          <p class="mb-1">Email: <a class="text-white text-decoration-underline" href="mailto:info@washingtonaada.org">info@washingtonaada.org</a></p>
+          <p class="mb-0">Phone: <a class="text-white text-decoration-underline" href="tel:+13015551234">(301) 555-1234</a></p>
+        </div>
+        <div class="col-md-6 mb-4 text-md-end text-center">
+          <h6 class="text-uppercase fw-bold">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a class="text-white text-decoration-none" href="index.html">Home</a></li>
+            <li><a class="text-white text-decoration-none" href="about.html">About</a></li>
+            <li><a class="text-white text-decoration-none" href="gallery.html">Gallery</a></li>
+            <li><a class="text-white text-decoration-none" href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center mt-3 social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61556284097997" target="_blank" rel="noopener noreferrer">
+            <img src="icons/facebook-icon.svg" alt="Facebook" width="32" height="32"/>
+          </a>
+          <a href="https://youtube.com/@washingtonaada" target="_blank" rel="noopener noreferrer">
+            <img src="icons/youtube-icon.svg" alt="YouTube" width="32" height="32"/>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center border-top border-white pt-3 mt-4">
+          <p class="small mb-1">© 2025 Washington Arts and Design Association. All rights reserved.</p>
+          <p class="small mb-0">
+            Designed by <a class="designer-link fw-bold" href="https://duanstudio.com" target="_blank"> <span class="duan-brand">Duan Studio</span></a>
+            <span class="text-light">(Liam Duan)</span>
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ===================== Footer Section ===================== -->
-<footer class="footer-section text-white pt-5 pb-3">
-<div class="container">
-<!-- Row 1: Logo and Contact Info + Quick Links -->
-<div class="row">
-<!-- Left Column -->
-<div class="col-md-6 mb-4 text-md-start text-center">
-  <img 
-    src="images/waada-white-logo.png" 
-    alt="WAADA Logo" 
-    class="mb-2" 
-    style="height: 60px; width: auto;" />
-    
-  <p class="mb-1 fw-bold">WASHINGTON ARTS AND DESIGN ASSOCIATION</p>
-  <p class="mb-1">7316 Olive Tree Ct, Gaithersburg, MD 20879</p>
-  <p class="mb-1">
-    Email: <a class="text-white text-decoration-underline" href="mailto:info@washingtonaada.org">info@washingtonaada.org</a>
-  </p>
-  <p class="mb-0">
-    Phone: <a class="text-white text-decoration-underline" href="tel:+13015551234">(301) 555-1234</a>
-  </p>
-</div>
-
-<!-- Right Column -->
-<div class="col-md-6 mb-4 text-md-end text-center">
-<h6 class="text-uppercase fw-bold">Quick Links</h6>
-<ul class="list-unstyled">
-<li><a class="text-white text-decoration-none" href="index.html">Home</a></li>
-<li><a class="text-white text-decoration-none" href="about.html">About</a></li>
-<li><a class="text-white text-decoration-none" href="events.html">Events</a></li>
-<li><a class="text-white text-decoration-none" href="gallery.html">Gallery</a></li>
-<li><a class="text-white text-decoration-none" href="donate.html">Donate</a></li>
-</ul>
-</div>
-</div>
-<!-- Row 2: Social Icons -->
-<div class="row">
-<div class="col-12 text-center mt-3 social-icons">
-<a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61556284097997&mibextid=wwXIfr&rdid=nam7fiqxhdRdBDcF&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JdGbkVxeQ%2F%3Fmibextid%3DwwXIfr" target="_blank">
-<img alt="Facebook" class="social-icon" height="32" src="icons/facebook-icon.svg" width="32">
-</img></a>
-<a aria-label="YouTube" href="https://youtube.com/@washingtonaada" target="_blank">
-<img alt="YouTube" class="social-icon" height="32" src="icons/youtube-icon.svg" width="32">
-</img></a>
-</div>
-</div>
-<!-- Row 3: Footer Credits -->
-<div class="row">
-<div class="col-12 text-center border-top border-white pt-3 mt-4">
-<p class="small mb-1">© 2025 Washington Arts and Design Association. All rights reserved.</p>
-<p class="small mb-0">
-      Designed by 
-      <a class="designer-link fw-bold" href="https://duanstudio.com" target="_blank">
-<span class="duan-brand">Duan Studio</span>
-</a>
-<span class="text-light">(Liam Duan)</span>
-</p>
-</div>
-</div>
-</div>
-</footer>
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script defer="" src="js/main.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
