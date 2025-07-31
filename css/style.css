@@ -20,14 +20,57 @@ h1 {
 }
 
 /* =========== Gallery Page albums card hover effect =========== */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.gallery-section .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: none;
   cursor: pointer;
 }
 
-.card:hover {
+.gallery-section .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  background-color: #fff8f0;
+}
+
+.gallery-section .card:hover .card-title {
+  color: #86363f;
+}
+
+/* =========== Team Page background =========== */
+.team-section {
+  position: relative;
+ background: url('../images/background/black-hill-park.webp') center / cover no-repeat;
+}
+
+.team-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.5); /* white overlay */
+  z-index: 0;
+}
+
+.team-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========== Team Page Hover Effect =========== */
+.team-section .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: none;
+}
+
+.team-section .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  background-color: #fff8f0;
+}
+
+.team-section .card:hover .btn-waada {
+  background-color: #86363f;
+  color: white;
+  border-color: #86363f;
 }
 
 /* =========== Theme Red: #86363f ============= */
