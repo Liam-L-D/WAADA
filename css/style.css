@@ -19,6 +19,17 @@ h1 {
   height: 100vh; 
 }
 
+/* =========== Gallery Page albums card hover effect =========== */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
 /* =========== Theme Red: #86363f ============= */
 .btn-waada {
   color: #86363f;
