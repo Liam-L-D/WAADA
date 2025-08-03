@@ -36,25 +36,6 @@ h1 {
   color: #86363f;
 }
 
-/* =========== Team Page background =========== */
-.team-section {
-  position: relative;
- background: url('../images/background/black-hill-park.webp') center / cover no-repeat;
-}
-
-.team-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.5); /* white overlay */
-  z-index: 0;
-}
-
-.team-section .container {
-  position: relative;
-  z-index: 1;
-}
-
 /* =========== Team Page Hover Effect =========== */
 .team-section .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
