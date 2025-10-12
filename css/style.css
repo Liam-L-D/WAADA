@@ -18,6 +18,91 @@ h1 {
   width: 100%;
   height: 100vh; 
 }
+section.bg-light {
+  background: linear-gradient(180deg, #ffffff 0%, #fff8f8 100%);
+  position: relative;
+  z-index: 1;
+}
+
+section.bg-light::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 140px;
+  height: 140px;
+  background: url("images/waada-logo.png") no-repeat center/contain;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+section.bg-light .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Buttons inside introduction */
+.btn-waada {
+  border: 2px solid #86363f;
+  color: #86363f;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-waada:hover {
+  background-color: #86363f;
+  color: #fff;
+}
+
+.btn-outline-secondary {
+  border: 2px solid #666;
+  color: #333;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+/* ===================== Home Page Events Card Hover ===================== */
+.event-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: block;
+  padding-bottom: 1.5rem; 
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.event-card .event-img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.event-card:hover .event-img {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+.event-card h5 {
+  color: #f7d084; /* theme yellow accent for hover section titles */
+  transition: color 0.3s ease;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-card p {
+  margin-bottom: 1.25rem; 
+  color: #f8f8f8;
+  font-size: 1rem;
+}
+
+.event-card:hover h5 {
+  color: #fff;
+}
 
 /* =========== Gallery Page albums card hover effect =========== */
 .gallery-section .card {
@@ -126,5 +211,11 @@ h1 {
 @media (max-width: 768px) {
   .parallax-section {
     background-attachment: scroll !important;
+  }
+  section.bg-light::before {
+    display: none;
+  }
+  .btn-waada, .btn-outline-secondary {
+    width: 100%;
   }
 }

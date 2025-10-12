@@ -76,65 +76,105 @@
     </div>
   </nav>
 
-<!-- ===================== Hero Section with Background Video and Overlay ===================== -->
-<header class="hero-video-section position-relative text-white text-center">
-  <!-- Background video -->
-  <video autoplay muted loop playsinline
-         class="position-absolute top-0 start-0 w-100 h-100"
-         style="object-fit: cover; z-index: -2;">
-    <source src="media/home.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <!-- ===================== Hero Section with Background Video and Overlay ===================== -->
+  <header class="hero-video-section position-relative text-white text-center">
+    <!-- Background video -->
+    <video autoplay muted loop playsinline
+           class="position-absolute top-0 start-0 w-100 h-100"
+           style="object-fit: cover; z-index: -2;">
+      <source src="media/home.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <!-- Overlay layer -->
-  <div class="position-absolute top-0 start-0 w-100 h-100"
-       style="background: rgba(0, 0, 0, 0.5); z-index: -1;"></div>
+    <!-- Overlay layer -->
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+         style="background: rgba(0, 0, 0, 0.5); z-index: -1;"></div>
 
-  <!-- Foreground content -->
- <div class="container position-relative z-1 d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 75vh;">
-    <h1 class="display-3 fw-bold">Bridging Cultures. Inspiring Minds.<br>Empowering Creators.</h1>
-    <a class="btn btn-outline-light mt-4" href="about.html">Explore Our Mission</a>
+    <!-- Foreground content -->
+    <div class="container position-relative z-1 d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 75vh;">
+      <h1 class="display-3 fw-bold">Bridging Cultures. Inspiring Minds.<br>Empowering Creators.</h1>
+      <a class="btn btn-outline-light mt-4" href="about.html">Explore Our Mission</a>
+    </div>
+  </header>
+
+ <!-- ===================== Introduction / About WAADA ===================== -->
+<section class="py-5 bg-light text-center">
+  <div class="container col-md-10 mx-auto">
+    <h2 class="mb-4 fw-bold" style="color:#86363f;">About WAADA</h2>
+
+    <p class="lead text-start" style="color:#4a4a4a;">
+      The Washington Art and Design Association (WAADA) is a nonprofit organization originating in Maryland, USA. The platform focuses on advocating the development of contemporary culture, art, and design.
+    </p>
+
+    <p class="lead text-start" style="color:#4a4a4a;">
+      Through art and design exhibitions and experiential projects, we promote cultural exchanges and cooperation between different ethnic communities and the mainstream society, attract outstanding artists, designers, and other cultural and education professionals from around the world, and serve American society and individuals to promote mutual understanding and interaction.
+    </p>
+
+    <p class="lead text-start" style="color:#4a4a4a;">
+      WAADA adheres to the values of universal civilization, upholds free thought and new concepts, and spreads creative masterpieces and advanced educational ideas.
+    </p>
+
+    <div class="d-flex flex-wrap gap-3 justify-content-center mt-3">
+      <a class="btn btn-waada px-4" href="about.html">Learn More About Us</a>
+      <a class="btn px-4" href="donate.html"
+   style="border:2px solid #c1912b; color:#c1912b; font-weight:600; transition:all .3s ease;"
+   onmouseover="this.style.backgroundColor='#b8831a'; this.style.color='white';"
+   onmouseout="this.style.backgroundColor='transparent'; this.style.color='#c1912b';">
+   Donate
+   </a>
+    </div>
   </div>
-</header>
+</section>
 
-  <!-- Mission Section -->
-  <section class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="mb-4 fw-bold" style="color: #86363f;">Our Mission</h2>
-      <p class="lead col-md-10 mx-auto text-start" style="color: #86363f;">
-        The Washington Arts and Design Association (WAADA) promotes cultural exchange and mutual understanding through art and design. We support creative projects and programs that connect diverse communities and inspire collaboration and innovation.
-      </p>
-    </div>
-  </section>
-  <!-- Events Preview Section -->
-  <section class="parallax-section py-5 text-white position-relative" style="background: url('images/background/home-backgound2.webp') center / cover no-repeat; background-attachment: fixed; min-height: 80vh;">
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1;"></div>
-    <div class="container position-relative z-2">
-      <h2 class="text-center mb-4 fw-bold">Recent Initiatives</h2>
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <img src="images/1.webp" alt="Art Workshop" class="img-fluid rounded mb-2" loading="lazy"/>
-          <h5>Creative Workshop Series</h5>
-          <p>Connecting emerging artists with experienced mentors and educators.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="images/2.webp" alt="Exhibition" class="img-fluid rounded mb-2" loading="lazy"/>
-          <h5>Community Art Exhibition</h5>
-          <p>Highlighting contemporary work from local Chinese-American creatives.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="images/3.webp" alt="Performance" class="img-fluid rounded mb-2" loading="lazy"/>
-          <h5>Cultural Performance Night</h5>
-          <p>Bringing music, design, and dance together in a community celebration.</p>
-        </div>
-      </div>
-      <div class="text-center">
-        <a class="btn btn-outline-light mt-3" href="gallery.html">See All Events</a>
-      </div>
-    </div>
-  </section>
+  <!-- ===================== Events Preview Section ===================== -->
+<section class="parallax-section py-5 text-white position-relative" 
+         style="background: url('images/background/home-backgound2.webp') center / cover no-repeat; background-attachment: fixed; min-height: 80vh;">
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1;"></div>
+  <div class="container position-relative z-2">
+    <h2 class="text-center mb-4 fw-bold">Recent Initiatives</h2>
 
-  <!-- Footer -->
+    <div class="row text-center justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <a href="gallery/ode-to-spring.html" class="event-card d-block text-white text-decoration-none">
+          <div class="overflow-hidden rounded shadow-sm">
+            <img src="images/1.webp" alt="Ode to Spring" class="img-fluid event-img" loading="lazy"/>
+          </div>
+          <h5 class="mt-3 fw-semibold">Ode to Spring</h5>
+          <p class="mb-0">A colorful celebration of renewal and artistic expression.</p>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <a href="gallery/blossom-in-june.html" class="event-card d-block text-white text-decoration-none">
+          <div class="overflow-hidden rounded shadow-sm">
+            <img src="images/2.webp" alt="Blossom in June" class="img-fluid event-img" loading="lazy"/>
+          </div>
+          <h5 class="mt-3 fw-semibold">Blossom in June</h5>
+          <p class="mb-0">Showcasing creative works by local artists and designers.</p>
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <a href="gallery/call-of-autumn.html" class="event-card d-block text-white text-decoration-none">
+          <div class="overflow-hidden rounded shadow-sm">
+            <img src="images/3.webp" alt="Call of Autumn" class="img-fluid event-img" loading="lazy"/>
+          </div>
+          <h5 class="mt-3 fw-semibold">Call of Autumn</h5>
+          <p class="mb-0">Bringing together music, design, and cultural performance.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a class="btn btn-outline-light mt-3" href="gallery.html">See All Events</a>
+    </div>
+  </div>
+</section>
+
+  <!-- ===================== Footer ===================== -->
   <footer class="footer-section text-white pt-5 pb-3">
     <div class="container">
       <div class="row">
