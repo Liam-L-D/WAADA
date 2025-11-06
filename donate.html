@@ -31,13 +31,31 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="parallax-section text-white text-center position-relative" style="background: url('images/background/donate-hero.webp') center / cover no-repeat; background-attachment: fixed; min-height: 50vh;">
-    <div class="container position-relative z-2 py-5">
-      <h1 class="display-4 fw-bold">Support Our Mission</h1>
-    </div>
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
-  </header>
+ <!-- =============== Hero Section ============== -->
+<header class="parallax-section text-white text-center position-relative"
+        style="background:none; min-height:60vh; overflow:hidden;">
+  <picture>
+    <!-- phone（≤767px） -->
+    <source media="(max-width: 767px)" srcset="images/background/donate-hero-m.webp">
+    <!-- iPad（768–1024px） -->
+    <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/background/donate-hero.webp">
+    <!-- Mac（>1024px） -->
+    <source media="(min-width: 1025px)" srcset="images/background/donate-hero.webp" type="image/webp">
+    <!-- 兜底：jpg（可选） -->
+    <img src="images/background/donate-hero.jpg" alt="Donate to WAADA"
+         style="position:absolute; inset:0; width:100%; height:100%;
+                object-fit:cover; object-position:center; z-index:0;">
+  </picture>
+
+  <!-- 与 about.html 一致的遮罩层 -->
+  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.6); z-index:1;"></div>
+
+  <!-- 标题容器，保持同样的间距与层级 -->
+  <div class="container position-relative z-2 py-5">
+    <h1 class="display-4 fw-bold">Support Our Mission</h1>
+    <p class="lead mt-3" style="max-width:700px;margin:0 auto;">Together, we can inspire connection, creativity, and cultural exchange across generations.</p>
+  </div>
+</header>
 
  <!-- Donation Content -->
 <section class="py-5 bg-light">

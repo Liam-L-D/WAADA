@@ -32,12 +32,30 @@
   </nav>
 
   <!-- Gallery Hero -->
-  <header class="parallax-section text-white text-center position-relative" style="background: url('images/background/black-hill-park.webp') center / cover no-repeat; background-attachment: fixed; min-height: 50vh;">
-    <div class="container position-relative z-2 py-5">
-      <h1 class="display-4 fw-bold">Event Photo Gallery</h1>
-    </div>
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
-  </header>
+<header class="parallax-section text-white text-center position-relative"
+        style="background:none; min-height:50vh; overflow:hidden;">
+  <picture>
+    <!-- 手机（≤767px） -->
+    <source media="(max-width: 767px)" srcset="images/background/black-hill-park.webp">
+    <!-- 平板（768–1024px） -->
+    <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/background/black-hill-parkm.webp">
+    <!-- 桌面（>1024px） -->
+    <source media="(min-width: 1025px)" srcset="images/background/black-hill-park.webp" type="image/webp">
+    <!-- 兜底 JPG（可选，如果你有 jpg 版本） -->
+    <img src="images/background/black-hill-park.webp" alt="Event Photo Gallery"
+         style="position:absolute; inset:0; width:100%; height:100%;
+                object-fit:cover; object-position:center; z-index:0;">
+  </picture>
+
+  <!-- 遮罩层 -->
+  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.6); z-index:1;"></div>
+
+  <!-- 标题 -->
+  <div class="container position-relative z-2 py-5">
+    <h1 class="display-4 fw-bold">Event Photo Gallery</h1>
+  </div>
+</header>
+
 
  <!----------------------- Gallery Section ----------------------->
 <section class="py-5 bg-light gallery-section">
