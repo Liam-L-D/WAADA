@@ -1,14 +1,54 @@
-// Adjust background-attachment behavior for parallax sections on mobile devices
+// =============================
+// Parallax Fix for Mobile
+// =============================
 document.addEventListener("DOMContentLoaded", function () {
-  // Check if the screen width is 768px or less (mobile or tablet)
+
   if (window.innerWidth <= 768) {
-    // Select all sections with the class 'parallax-section'
     const sections = document.querySelectorAll('.parallax-section');
 
-    // Loop through each section and override background attachment to 'scroll'
     sections.forEach(section => {
       section.style.backgroundAttachment = 'scroll';
     });
   }
-});
 
+  // =============================
+  // Gallery Lightbox
+  // =============================
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const galleryLinks = document.querySelectorAll('.whispers-gallery .gallery-item');
+
+  if (galleryLinks.length > 0) {
+
+    galleryLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        lightboxImg.src = this.getAttribute('href');
+        lightbox.classList.add('active');
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+      }
+    });
+
+  }
+
+});

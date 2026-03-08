@@ -302,6 +302,13 @@ a.btn.btn-waada-outline:focus{
   color: #86363f;
 }
 
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:24px;
+}
+
+
 /* ======================================
    WAADA Color Treatment – Spotlight Text
 ========================================= */
@@ -348,6 +355,88 @@ a.btn.btn-waada-outline:focus{
   background-color: #86363f;
   color: white;
   border-color: #86363f;
+}
+
+/* ======================================
+   Whispers of the Heart Gallery Grid
+====================================== */
+.whispers-gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.whispers-gallery .gallery-item{
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.whispers-gallery .gallery-item:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.16);
+}
+
+.whispers-gallery .gallery-item img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.4s ease;
+}
+
+.whispers-gallery .gallery-item:hover img{
+  transform: scale(1.045);
+}
+
+/* Lightbox */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 9999;
+}
+
+.lightbox.active{
+  display: flex;
+}
+
+.lightbox img{
+  max-width: min(92vw, 1200px);
+  max-height: 88vh;
+  border-radius: 12px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.4);
+}
+
+.lightbox-close{
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.lightbox-close:hover{
+  background: rgba(255,255,255,0.22);
+  transform: scale(1.06);
 }
 
 /* ====================================== Footer Section ===================================== */
@@ -402,16 +491,31 @@ a.btn.btn-waada-outline:focus{
 }
 
 /* ============================================
-  Responsible Interface
-   ============================================ */
+   Responsible Interface
+============================================ */
 @media (max-width: 768px) {
   .parallax-section {
     background-attachment: scroll !important;
   }
+
   section.bg-light::before {
     display: none;
   }
-  .btn-waada, .btn-outline-secondary {
+
+  .btn-waada,
+  .btn-outline-secondary {
     width: 100%;
+  }
+
+  .whispers-gallery{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px){
+  .whispers-gallery{
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 }
