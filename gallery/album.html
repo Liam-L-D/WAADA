@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  />
+
+  <!-- ========================================
+       Dynamic SEO
+       WordPress will update these
+  ========================================= -->
+
+  <title>Gallery | WAADA</title>
+
+  <meta
+    id="meta-description"
+    name="description"
+    content="Gallery and event highlights from Washington Arts and Design Association."
+  />
+
+
+  <!-- Bootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  />
+
+  <!-- WAADA CSS -->
+  <link
+    rel="stylesheet"
+    href="../css/style.css"
+  />
+</head>
+
+
+<body>
+
+
+  <!-- ========================================
+       Navigation
+  ========================================= -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+    <div class="container">
+
+      <a
+        class="navbar-brand"
+        href="../index.html"
+      >
+
+        <img
+          src="../images/waada-logo.png"
+          alt="WAADA Logo"
+          style="height: 40px;"
+        />
+
+      </a>
+
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <div
+        class="collapse navbar-collapse"
+        id="mainNav"
+      >
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="../index.html"
+            >
+              Home
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="../about.html"
+            >
+              About
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link active"
+              href="../gallery.html"
+            >
+              Gallery
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="../team.html"
+            >
+              Team
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="../donate.html"
+            >
+              Donate
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+<!-- ========================================
+     Hero Section
+     First content image comes from WordPress
+========================================= -->
+
+  <header
+    id="album-hero"
+    class="parallax-section text-white text-center position-relative"
+    style="
+      min-height: 50vh;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    "
+  >
+
+    <div class="container position-relative z-2 py-5">
+
+      <h1
+        id="album-hero-title"
+        class="display-4 fw-bold"
+      >
+        Loading Album...
+      </h1>
+
+    </div>
+
+
+    <!-- Overlay -->
+    <div
+      style="
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      "
+    ></div>
+
+  </header>
+
+
+
+  <!-- ========================================
+       Album Content
+  ========================================= -->
+
+  <section class="py-5 bg-light">
+
+    <div class="container">
+
+
+      <!-- Back to Gallery -->
+      <div class="mb-4">
+
+      <a href="../gallery.html" class="back-to-gallery">
+      Back to Gallery
+      </a>
+
+      </div>
+
+
+
+      <!-- Album Heading -->
+      <h2
+        id="album-title"
+        class="mb-4 fw-bold"
+        style="color:#86363f;"
+      >
+        Loading...
+      </h2>
+
+
+
+      <!-- Album Description -->
+      <div
+        id="album-description"
+        class="mb-5"
+      >
+
+        <p>
+          Loading album content...
+        </p>
+
+      </div>
+
+
+
+      <!-- ====================================
+           Gallery Images
+           Generated from WordPress
+      ===================================== -->
+
+      <div
+        id="album-gallery"
+        class="gallery-grid"
+      >
+      </div>
+
+
+
+      <!-- ====================================
+           Lightbox
+      ===================================== -->
+
+      <div
+        class="lightbox"
+        id="lightbox"
+      >
+
+        <button
+          class="lightbox-close"
+          id="lightboxClose"
+          aria-label="Close image"
+        >
+          &times;
+        </button>
+
+        <img
+          id="lightboxImg"
+          src=""
+          alt="Expanded gallery image"
+        />
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ========================================
+       Footer
+  ========================================= -->
+
+  <footer class="footer-section text-white pt-5 pb-3">
+
+    <div class="container">
+
+      <div class="row">
+
+
+        <div class="col-md-6 mb-4 text-md-start text-center">
+
+          <img
+            src="../images/waada-white-logo.png"
+            alt="WAADA Logo"
+            style="height: 60px;"
+          />
+
+          <p class="mb-1 fw-bold">
+            WASHINGTON ARTS AND DESIGN ASSOCIATION
+          </p>
+
+          <p class="mb-1">
+            7316 Olive Tree Ct, Gaithersburg, MD 20879
+          </p>
+
+          <p class="mb-1">
+
+            Email:
+
+            <a
+              class="text-white text-decoration-underline"
+              href="mailto:info@washingtonaada.org"
+            >
+              info@washingtonaada.org
+            </a>
+
+          </p>
+
+          <p class="mb-0">
+
+            Phone:
+
+            <a
+              class="text-white text-decoration-underline"
+              href="tel:+13012169879"
+            >
+              (301) 216-9879
+            </a>
+
+          </p>
+
+        </div>
+
+
+
+        <div class="col-md-6 mb-4 text-md-end text-center">
+
+          <h6 class="text-uppercase fw-bold">
+            Quick Links
+          </h6>
+
+          <ul class="list-unstyled">
+
+            <li>
+              <a
+                class="text-white text-decoration-none"
+                href="../index.html"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-white text-decoration-none"
+                href="../about.html"
+              >
+                About
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-white text-decoration-none"
+                href="../gallery.html"
+              >
+                Gallery
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-white text-decoration-none"
+                href="../donate.html"
+              >
+                Donate
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Social Media -->
+      <div class="row">
+
+        <div class="col-12 text-center mt-3 social-icons">
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61556284097997"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <img
+              src="../icons/facebook-icon.svg"
+              alt="Facebook"
+              width="32"
+              height="32"
+            />
+
+          </a>
+
+
+          <a
+            href="https://youtube.com/@washingtonaada"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <img
+              src="../icons/youtube-icon.svg"
+              alt="YouTube"
+              width="32"
+              height="32"
+            />
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Copyright -->
+      <div class="row">
+
+        <div class="col-12 text-center border-top border-white pt-3 mt-4">
+
+          <p class="small mb-1">
+          © <span id="current-year"></span> Washington Arts and Design Association. All rights reserved.
+          </p>
+
+          <p class="small mb-0">
+
+            Designed by
+
+            <a
+              class="designer-link fw-bold"
+              href="https://duanstudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span class="duan-brand">
+                Duan Studio
+              </span>
+
+            </a>
+
+            <span class="text-light">
+              (Liam Duan)
+            </span>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- ========================================
+       Bootstrap
+  ========================================= -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+
+  <!-- ========================================
+       WordPress Album CMS
+  ========================================= -->
+
+  <script>
+
+    // ----------------------------------------
+    // Get WordPress Post ID
+    //
+    // Example:
+    // album.html?id=5
+    // ----------------------------------------
+
+    const params =
+      new URLSearchParams(window.location.search);
+
+    const albumId =
+      params.get("id");
+
+
+
+    async function loadAlbum() {
+
+      const titleElement =
+        document.getElementById("album-title");
+
+      const heroTitle =
+        document.getElementById("album-hero-title");
+
+      const hero =
+        document.getElementById("album-hero");
+
+      const descriptionElement =
+        document.getElementById("album-description");
+
+      const galleryElement =
+        document.getElementById("album-gallery");
+
+      const metaDescription =
+        document.getElementById("meta-description");
+
+
+
+      // --------------------------------------
+      // No Post ID
+      // --------------------------------------
+
+      if (!albumId) {
+
+        titleElement.textContent =
+          "Album Not Found";
+
+        heroTitle.textContent =
+          "Album Not Found";
+
+        descriptionElement.innerHTML = `
+          <p>
+            No gallery album was selected.
+          </p>
+        `;
+
+        return;
+      }
+
+
+
+      // --------------------------------------
+      // WordPress.com API
+      // --------------------------------------
+
+     const API_URL =
+ 		 `https://public-api.wordpress.com/rest/v1.2/read/sites/waadacms.wordpress.com/posts/${albumId}`;
+
+
+      try {
+
+        const response =
+          await fetch(API_URL);
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            `WordPress API Error: ${response.status}`
+          );
+
+        }
+
+
+        const post =
+          await response.json();
+
+
+        console.log(
+          "WAADA Album Data:",
+          post
+        );
+
+
+
+        // ====================================
+        // Title
+        // ====================================
+
+        const title =
+          post.title || "Untitled Album";
+
+
+        titleElement.textContent =
+          title;
+
+        heroTitle.textContent =
+          title;
+
+
+        // Dynamic browser / Google title
+        document.title =
+          `${title} | WAADA`;
+
+
+
+        // ====================================
+        // SEO Description
+        // ====================================
+
+        let seoDescription = "";
+
+
+        if (post.excerpt) {
+
+          const temp =
+            document.createElement("div");
+
+          temp.innerHTML =
+            post.excerpt;
+
+          seoDescription =
+            temp.textContent.trim();
+
+        }
+
+
+        if (!seoDescription) {
+
+          seoDescription =
+            `Gallery and event highlights from ${title} at Washington Arts and Design Association.`;
+
+        }
+
+
+        metaDescription.setAttribute(
+          "content",
+          seoDescription
+        );
+
+        // ====================================
+        // Parse WordPress Content
+        // ====================================
+
+        const parser =
+          document.createElement("div");
+
+        parser.innerHTML =
+          post.content || "";
+
+// ====================================
+// First Content Image → Hero
+// ====================================
+
+const heroImage =
+  parser.querySelector("img");
+
+
+if (heroImage) {
+
+  const heroSrc =
+    heroImage.getAttribute("src");
+
+
+  if (heroSrc) {
+
+    hero.style.backgroundImage =
+      `url("${heroSrc}")`;
+
+  }
+
+
+  // Remove Hero image from content
+  // so it does not appear twice
+  const heroFigure =
+    heroImage.closest("figure");
+
+
+  if (heroFigure) {
+
+    heroFigure.remove();
+
+  } else {
+
+    heroImage.remove();
+
+  }
+
+}
+
+        // ====================================
+        // Find Gallery Images
+        // ====================================
+
+        const images =
+          Array.from(
+            parser.querySelectorAll("img")
+          );
+
+
+
+        // ====================================
+        // Generate WAADA Gallery Grid
+        // ====================================
+
+        galleryElement.innerHTML = "";
+
+
+        images.forEach(
+          (image, index) => {
+
+            const src =
+              image.getAttribute("src");
+
+            if (!src) {
+              return;
+            }
+
+
+            const alt =
+              image.getAttribute("alt") ||
+              `${title} gallery photo ${index + 1}`;
+
+
+            const galleryItem =
+              document.createElement("a");
+
+
+            galleryItem.href =
+              src;
+
+            galleryItem.className =
+              "gallery-item";
+
+
+            galleryItem.innerHTML = `
+
+              <img
+                src="${src}"
+                alt="${alt}"
+                loading="lazy"
+              >
+
+            `;
+
+
+            galleryElement.appendChild(
+              galleryItem
+            );
+
+          }
+        );
+
+
+
+        // ====================================
+        // Remove Images From Description
+        //
+        // Images appear below in gallery grid,
+        // so we don't want duplicates.
+        // ====================================
+
+        parser
+          .querySelectorAll(
+            "figure, .wp-block-gallery, img"
+          )
+          .forEach(
+            element => element.remove()
+          );
+
+
+
+        // ====================================
+        // Description
+        // ====================================
+
+        let descriptionHTML =
+          parser.innerHTML.trim();
+
+
+        if (!descriptionHTML && post.excerpt) {
+
+          descriptionHTML =
+            post.excerpt;
+
+        }
+
+
+        descriptionElement.innerHTML =
+          descriptionHTML;
+
+
+
+        // ====================================
+        // Lightbox
+        // ====================================
+
+        initializeLightbox();
+
+      }
+
+      catch (error) {
+
+        console.error(
+          "WAADA Album CMS Error:",
+          error
+        );
+
+
+        titleElement.textContent =
+          "Album Could Not Be Loaded";
+
+        heroTitle.textContent =
+          "Gallery";
+
+        descriptionElement.innerHTML = `
+
+          <p>
+            Please return to the Gallery
+            and try again.
+          </p>
+
+        `;
+
+      }
+
+    }
+
+
+
+    // ========================================
+    // Dynamic Lightbox
+    // ========================================
+
+    function initializeLightbox() {
+
+      const lightbox =
+        document.getElementById("lightbox");
+
+      const lightboxImg =
+        document.getElementById("lightboxImg");
+
+      const lightboxClose =
+        document.getElementById("lightboxClose");
+
+
+
+      document
+        .querySelectorAll(".gallery-item")
+        .forEach(
+          item => {
+
+            item.addEventListener(
+              "click",
+              event => {
+
+                event.preventDefault();
+
+                const image =
+                  item.querySelector("img");
+
+
+                lightboxImg.src =
+                  item.href;
+
+
+                lightboxImg.alt =
+                  image
+                    ? image.alt
+                    : "Expanded gallery image";
+
+
+                lightbox.classList.add(
+                  "active"
+                );
+
+              }
+            );
+
+          }
+        );
+
+
+
+      lightboxClose.addEventListener(
+        "click",
+        () => {
+
+          lightbox.classList.remove(
+            "active"
+          );
+
+        }
+      );
+
+
+
+      lightbox.addEventListener(
+        "click",
+        event => {
+
+          if (event.target === lightbox) {
+
+            lightbox.classList.remove(
+              "active"
+            );
+
+          }
+
+        }
+      );
+
+
+
+      document.addEventListener(
+        "keydown",
+        event => {
+
+          if (event.key === "Escape") {
+
+            lightbox.classList.remove(
+              "active"
+            );
+
+          }
+
+        }
+      );
+
+    }
+
+
+
+    // ========================================
+    // Start
+    // ========================================
+
+    loadAlbum();
+
+  </script>
+
+
+</body>
+
+</html>

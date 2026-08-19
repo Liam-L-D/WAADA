@@ -1,39 +1,180 @@
-/* ====================================== Navbar Section ===================================== */
-.navbar-light .navbar-nav .nav-link {
-  color: #000 !important;
-  transition: color 0.3s ease;
+/* ============================================================
+   WAADA – Main Stylesheet
+   Washington Arts and Design Association
+============================================================ */
+
+
+/* ============================================================
+   1. Theme Variables
+============================================================ */
+
+:root {
+  --waada-red: #86363f;
+  --waada-red-dark: #6f2d35;
+
+  --waada-yellow: #f7d084;
+  --waada-gold: #c1912b;
+  --waada-gold-hover: #b8831a;
+
+  --waada-blue: #1f3c5a;
+
+  --text-dark: #222;
+  --text-body: #4a4a4a;
+  --text-light: #f8f8f8;
+
+  --bg-light: #fff8f8;
+  --bg-white: #ffffff;
+
+  --border-light: #e7e7e7;
+
+  --shadow-sm:
+    0 6px 16px rgba(0, 0, 0, 0.08);
+
+  --shadow-md:
+    0 12px 24px rgba(0, 0, 0, 0.14);
+
+  --shadow-lg:
+    0 18px 36px rgba(0, 0, 0, 0.20);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+
+  --transition:
+    0.3s ease;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #86363f !important; /* American Flag Red */
+
+/* ============================================================
+   2. Global
+============================================================ */
+
+html {
+  scroll-behavior: smooth;
 }
 
-/* ====================================== Hero Section ===================================== */
-h1 {
+body {
+  margin: 0;
+  color: var(--text-dark);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
-.hero-video-section video {
-  object-fit: cover;
-  width: 100%;
-  height: 100vh; 
+a {
+  transition:
+    color var(--transition),
+    background-color var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
 }
+
+
+/* ============================================================
+   3. Navigation
+============================================================ */
+
+.navbar {
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  display: block;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000 !important;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--waada-red) !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+
+/* ============================================================
+   4. Hero / Parallax
+============================================================ */
+
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-section h1 {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-video-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video-section video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+/* ============================================================
+   5. Light Sections
+============================================================ */
+
 section.bg-light {
-  background: linear-gradient(180deg, #ffffff 0%, #fff8f8 100%);
   position: relative;
   z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      var(--bg-light) 100%
+    );
 }
 
 section.bg-light::before {
   content: "";
+
   position: absolute;
+
   top: 10%;
   left: 5%;
+
   width: 140px;
   height: 140px;
-  background: url("images/waada-logo.png") no-repeat center/contain;
-  opacity: 0.05;
+
+  background:
+    url("../images/waada-logo.png")
+    no-repeat
+    center / contain;
+
+  opacity: 0.035;
+
   z-index: 0;
+
+  pointer-events: none;
 }
 
 section.bg-light .container {
@@ -41,481 +182,1175 @@ section.bg-light .container {
   z-index: 2;
 }
 
-/* Buttons inside introduction */
+
+/* ============================================================
+   6. WAADA Buttons
+============================================================ */
+
 .btn-waada {
-  border: 2px solid #86363f;
-  color: #86363f;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
+  display: inline-block;
 
-.btn-waada:hover {
-  background-color: #86363f;
-  color: #fff;
-}
+  border:
+    2px solid var(--waada-red);
 
-.btn-outline-secondary {
-  border: 2px solid #666;
-  color: #333;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
+  color: var(--waada-red);
 
-.btn-outline-secondary:hover {
-  background-color: #666;
-  color: #fff;
-}
-
-/* ============================================================
-   HOME PAGE – Cards / Poster / Buttons (WAADA)
-   Safe merged version
-============================================================ */
-
-/* ---------- Theme Tokens ---------- */
-:root{
-  --waada-yellow: #f7d084;
-  --waada-gold: #c1912b;
-  --waada-gold-hover: #b8831a;
-  --event-text: #f8f8f8;
-}
-
-/* ============================================================
-   Home Page Events Card Hover
-============================================================ */
-.event-card{
-  display: block;
-  padding-bottom: 1.5rem;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.event-card:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.30);
-}
-
-.event-card .event-img{
-  transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.event-card:hover .event-img{
-  transform: scale(1.05);
-  filter: brightness(1.15);
-}
-
-.event-card h5{
-  margin: 1rem 0 0.5rem;
-  color: var(--waada-yellow);
-  transition: color 0.3s ease;
-}
-
-.event-card:hover h5{
-  color: #fff;
-}
-
-.event-card p{
-  margin-bottom: 1.25rem;
-  color: var(--event-text);
-  font-size: 1rem;
-}
-
-/* ============================================================
-   WAADA Outline Button (Fix override issue)
-============================================================ */
-a.btn.btn-waada-outline{
-  border: 2px solid var(--waada-gold);
-  color: var(--waada-gold);
-  font-weight: 600;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-
-a.btn.btn-waada-outline:hover,
-a.btn.btn-waada-outline:focus{
-  background: var(--waada-gold-hover);
-  color: #fff;
-}
-
-/* ============================================================
-   Home – Poster (Video Fallback)
-============================================================ */
-.poster-link{
-  display: block;
-  text-decoration: none;
-}
-
-.poster-card{
-  position: relative;
-  background: #000;
-  padding: 10px;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 10px 22px rgba(0,0,0,.18);
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.poster-img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-}
-
-.poster-play{
-  position: absolute;
-  inset: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 58px;
-  color: #fff;
-  background: rgba(0,0,0,.25);
-  border-radius: 10px;
-  opacity: 0;
-  transition: opacity .25s ease;
-}
-
-.poster-card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 16px 30px rgba(0,0,0,.22);
-}
-
-.poster-card:hover .poster-play{
-  opacity: 1;
-}
-
-/* =================================
-   Home – Poster Hero (Refined)
-   - Smaller poster width (more balanced)
-   - Lighter overlay (brighter artwork)
-   - Calmer hover (still premium)
-==================================== */
-
-/* Wrap to control poster size (centered) */
-.poster-hero-wrap{
-  max-width: 920px;   /* 调小海报整体视觉宽度 */
-  margin: 0 auto;
-}
-
-.poster-hero{
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,.24);
-  transition: transform .35s ease, box-shadow .35s ease;
-}
-
-.poster-hero-img{
-  width: 100%;
-  height: auto;
-  display: block;
-
-  /* 比原来更“亮一点”，同时保留质感 */
-  filter: brightness(1.06) contrast(1.02);
-
-  /* 比原来更克制的初始张力 */
-  transform: scale(1.02);
-  transition: transform .55s ease, filter .35s ease;
-}
-
-/* Overlay lighter (so the poster looks brighter) */
-.poster-hero-overlay{
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-
-  /* 原来太黑：0.55 / 0.65
-     现在变浅：0.28 / 0.35 */
   background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.28),
-      rgba(0,0,0,.02) 45%,
-      rgba(0,0,0,.35)
-    );
-}
+    transparent;
 
-.poster-hero-label{
-  align-self: flex-start;
-  background: rgba(0,0,0,.42); /* label 也变浅一点 */
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  letter-spacing: .04em;
-}
+  font-weight: 600;
 
-.poster-play{
-  align-self: center;
-  font-size: 64px; /* 稍微小一点，不压画面 */
-  color: #fff;
-  opacity: .7;
-  transition: transform .3s ease, opacity .3s ease;
-}
-
-/* Hover calmer */
-.poster-hero:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 22px 44px rgba(0,0,0,.30);
-}
-
-.poster-hero:hover .poster-hero-img{
-  transform: scale(1.05);
-}
-
-.poster-hero:hover .poster-play{
-  transform: scale(1.08);
-  opacity: 1;
-}
-
-/* ============================================================
-   Home – Event Spotlight Text (Refined spacing)
-============================================================ */
-.spotlight-text{
-  max-width: 860px;      /* 稍微加宽，让文字更“饱满” */
-  margin: 0 auto;
-  font-size: 1.15rem;
-  line-height: 1.9;
-  color: #4a4a4a;
-}
-
-.spotlight-text p{
-  margin-bottom: 1.5rem;
-}
-
-/* =========== Gallery Page albums card hover effect =========== */
-.gallery-section .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  box-shadow: none;
-  cursor: pointer;
-}
-
-.gallery-section .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  background-color: #fff8f0;
-}
-
-.gallery-section .card:hover .card-title {
-  color: #86363f;
-}
-
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-  gap:24px;
-}
-
-
-/* ======================================
-   WAADA Color Treatment – Spotlight Text
-========================================= */
-
-/* WAADA theme red for titles */
-.waada-title-red{
-  color: #86363f;   /* WAADA 红 */
-}
-
-/* WAADA theme blue for body text */
-.waada-body-blue{
-  color: #1f3c5a;   /* topic blue */
-}
-
-
-/* =========== Team Page Hover Effect =========== */
-.team-section .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  box-shadow: none;
-}
-
-.team-section .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  background-color: #fff8f0;
-}
-
-.team-section .card:hover .btn-waada {
-  background-color: #86363f;
-  color: white;
-  border-color: #86363f;
-}
-
-/* =========== Theme Red: #86363f ============= */
-.btn-waada {
-  color: #86363f;
-  border: 2px solid #86363f;
-  background-color: transparent;
-  transition: all 0.3s ease;
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
 }
 
 .btn-waada:hover,
 .btn-waada:focus {
-  background-color: #86363f;
-  color: white;
-  border-color: #86363f;
+  background:
+    var(--waada-red);
+
+  color:
+    #fff;
+
+  border-color:
+    var(--waada-red);
+
+  transform:
+    translateY(-1px);
 }
 
-/* ======================================
-   Whispers of the Heart Gallery Grid
-====================================== */
-.whispers-gallery{
+
+.btn-outline-secondary {
+  border:
+    2px solid #666;
+
+  color:
+    #333;
+
+  background:
+    transparent;
+
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background:
+    #666;
+
+  color:
+    #fff;
+}
+
+
+/* Gold outline button */
+
+a.btn.btn-waada-outline {
+  border:
+    2px solid var(--waada-gold);
+
+  color:
+    var(--waada-gold);
+
+  background:
+    transparent;
+
+  font-weight:
+    600;
+
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+a.btn.btn-waada-outline:hover,
+a.btn.btn-waada-outline:focus {
+  background:
+    var(--waada-gold-hover);
+
+  border-color:
+    var(--waada-gold-hover);
+
+  color:
+    #fff;
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* ============================================================
+   7. Home – Event Cards
+============================================================ */
+
+.event-card {
+  display:
+    block;
+
+  padding-bottom:
+    1.5rem;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.event-card:hover {
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    var(--shadow-md);
+}
+
+.event-card .event-img {
+  display:
+    block;
+
+  width:
+    100%;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.event-card:hover .event-img {
+  transform:
+    scale(1.05);
+
+  filter:
+    brightness(1.1);
+}
+
+.event-card h5 {
+  margin:
+    1rem 0 0.5rem;
+
+  color:
+    var(--waada-yellow);
+
+  transition:
+    color var(--transition);
+}
+
+.event-card:hover h5 {
+  color:
+    #fff;
+}
+
+.event-card p {
+  margin-bottom:
+    1.25rem;
+
+  color:
+    var(--text-light);
+
+  font-size:
+    1rem;
+
+  line-height:
+    1.65;
+}
+
+
+/* ============================================================
+   8. Home – Poster
+============================================================ */
+
+.poster-link {
+  display:
+    block;
+
+  text-decoration:
+    none;
+}
+
+.poster-card {
+  position:
+    relative;
+
+  padding:
+    10px;
+
+  overflow:
+    hidden;
+
+  background:
+    #000;
+
+  border-radius:
+    var(--radius-md);
+
+  box-shadow:
+    var(--shadow-md);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.poster-card:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    var(--shadow-lg);
+}
+
+.poster-img {
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    auto;
+
+  border-radius:
+    var(--radius-sm);
+}
+
+.poster-play {
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+
+/* ============================================================
+   9. Home – Poster Hero
+============================================================ */
+
+.poster-hero-wrap {
+  max-width:
+    920px;
+
+  margin:
+    0 auto;
+}
+
+.poster-hero {
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.24);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.poster-hero:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 22px 44px rgba(0, 0, 0, 0.30);
+}
+
+.poster-hero-img {
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    auto;
+
+  filter:
+    brightness(1.06)
+    contrast(1.02);
+
+  transform:
+    scale(1.02);
+
+  transition:
+    transform 0.55s ease,
+    filter 0.35s ease;
+}
+
+.poster-hero:hover .poster-hero-img {
+  transform:
+    scale(1.05);
+}
+
+.poster-hero-overlay {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    space-between;
+
+  padding:
+    20px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.28),
+      rgba(0, 0, 0, 0.02) 45%,
+      rgba(0, 0, 0, 0.35)
+    );
+}
+
+.poster-hero-label {
+  align-self:
+    flex-start;
+
+  padding:
+    6px 14px;
+
+  color:
+    #fff;
+
+  background:
+    rgba(0, 0, 0, 0.42);
+
+  border-radius:
+    999px;
+
+  font-size:
+    0.9rem;
+
+  letter-spacing:
+    0.04em;
+}
+
+.poster-hero .poster-play {
+  align-self:
+    center;
+
+  font-size:
+    64px;
+
+  color:
+    #fff;
+
+  opacity:
+    0.7;
+}
+
+.poster-hero:hover .poster-play {
+  transform:
+    scale(1.08);
+
+  opacity:
+    1;
+}
+
+
+/* ============================================================
+   10. Home – Spotlight Text
+============================================================ */
+
+.spotlight-text {
+  max-width:
+    860px;
+
+  margin:
+    0 auto;
+
+  color:
+    var(--text-body);
+
+  font-size:
+    1.15rem;
+
+  line-height:
+    1.9;
+}
+
+.spotlight-text p {
+  margin-bottom:
+    1.5rem;
+}
+
+
+/* ============================================================
+   11. Utility Theme Text
+============================================================ */
+
+.waada-title-red {
+  color:
+    var(--waada-red);
+}
+
+.waada-body-blue {
+  color:
+    var(--waada-blue);
+}
+
+
+/* ============================================================
+   12. Main Gallery Page – Album Cards
+============================================================ */
+
+.gallery-section .card {
+  height:
+    100%;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid var(--border-light);
+
+  border-radius:
+    var(--radius-md);
+
+  background:
+    #fff;
+
+  box-shadow:
+    var(--shadow-sm);
+
+  cursor:
+    pointer;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background-color var(--transition);
+}
+
+.gallery-section .card:hover {
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    var(--shadow-md);
+
+  background-color:
+    #fff8f0;
+}
+
+.gallery-section .card-img-top {
+  display:
+    block;
+
+  width:
+    100%;
+
+  aspect-ratio:
+    4 / 3;
+
+  object-fit:
+    cover;
+}
+
+.gallery-section .card-title {
+  transition:
+    color var(--transition);
+}
+
+.gallery-section .card:hover .card-title {
+  color:
+    var(--waada-red);
+}
+
+.gallery-section .card-text {
+  color:
+    var(--text-body);
+
+  line-height:
+    1.65;
+}
+
+
+/* ============================================================
+   13. CMS Album Page – Description
+============================================================ */
+
+#album-description {
+  max-width:
+    1000px;
+
+  color:
+    var(--text-body);
+
+  line-height:
+    1.8;
+
+  font-size:
+    1.02rem;
+}
+
+#album-description p {
+  margin-bottom:
+    1.25rem;
+}
+
+#album-description strong {
+  color:
+    var(--text-dark);
+}
+
+
+/* ============================================================
+   14. CMS Album – Stable Gallery
+============================================================ */
+
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
   gap: 24px;
+
+  width: 100%;
+
   align-items: start;
 }
 
-.whispers-gallery .gallery-item{
+
+.gallery-grid .gallery-item {
   display: block;
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
-}
 
-.whispers-gallery .gallery-item:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 16px 30px rgba(0,0,0,0.16);
-}
-
-.whispers-gallery .gallery-item img{
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 14px;
-  transition: transform 0.4s ease;
-}
 
-.whispers-gallery .gallery-item:hover img{
-  transform: scale(1.045);
-}
+  overflow: hidden;
 
-/* Lightbox */
-.lightbox{
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  z-index: 9999;
-}
+  border-radius: var(--radius-md);
 
-.lightbox.active{
-  display: flex;
-}
+  background: #fff;
 
-.lightbox img{
-  max-width: min(92vw, 1200px);
-  max-height: 88vh;
-  border-radius: 12px;
-  box-shadow: 0 16px 36px rgba(0,0,0,0.4);
-}
+  box-shadow: var(--shadow-sm);
 
-.lightbox-close{
-  position: absolute;
-  top: 18px;
-  right: 22px;
-  width: 48px;
-  height: 48px;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.12);
-  color: #fff;
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: background 0.25s ease, transform 0.25s ease;
-}
-
-.lightbox-close:hover{
-  background: rgba(255,255,255,0.22);
-  transform: scale(1.06);
-}
-
-/* ====================================== Footer Section ===================================== */
-.footer-section {
-/*------- background-color: #393b6b;  American Flag Blue */
-  background-color: #86363f; /* American Flag Red */
-  color: white;
-  padding: 3rem 0 1rem;
-  font-size: 0.9rem;
-}
-
-/* Duan Studio footer link */
-.designer-link {
-  color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
+
+  cursor: zoom-in;
+}
+
+
+.gallery-grid .gallery-item img {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  border-radius: var(--radius-md);
+}
+
+/* Hover */
+.gallery-grid .gallery-item {
+  border: 3px solid transparent;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.gallery-grid .gallery-item:hover {
+  border-color: var(--waada-red);
+  box-shadow: 0 10px 24px rgba(134, 54, 63, 0.28);
+}
+
+.gallery-grid .gallery-item:hover img {
+  filter: brightness(0.82);
+}
+
+/* ============================================================
+   15. Legacy Whispers Gallery
+   Keep until old pages are migrated to CMS
+============================================================ */
+
+.whispers-gallery {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(260px, 1fr)
+    );
+
+  gap:
+    24px;
+
+  align-items:
+    start;
+}
+
+.whispers-gallery .gallery-item {
+  display:
+    block;
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    var(--radius-md);
+
+  background:
+    #fff;
+
+  box-shadow:
+    var(--shadow-sm);
+
+  text-decoration:
+    none;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.whispers-gallery .gallery-item:hover {
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    var(--shadow-md);
+}
+
+.whispers-gallery .gallery-item img {
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    auto;
+
+  border-radius:
+    var(--radius-md);
+
+  transition:
+    transform 0.4s ease;
+}
+
+.whispers-gallery .gallery-item:hover img {
+  transform:
+    scale(1.035);
+}
+
+
+/* ============================================================
+   16. Lightbox
+============================================================ */
+
+.lightbox {
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  display:
+    none;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    24px;
+
+  background:
+    rgba(0, 0, 0, 0.92);
+
+  z-index:
+    9999;
+}
+
+.lightbox.active {
+  display:
+    flex;
+}
+
+.lightbox img {
+  display:
+    block;
+
+  max-width:
+    min(92vw, 1200px);
+
+  max-height:
+    88vh;
+
+  width:
+    auto;
+
+  height:
+    auto;
+
+  object-fit:
+    contain;
+
+  border-radius:
+    12px;
+
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-close {
+  position:
+    absolute;
+
+  top:
+    18px;
+
+  right:
+    22px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    48px;
+
+  height:
+    48px;
+
+  padding:
+    0;
+
+  border:
+    0;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  color:
+    #fff;
+
+  font-size:
+    2rem;
+
+  line-height:
+    1;
+
+  cursor:
+    pointer;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+  background:
+    rgba(255, 255, 255, 0.22);
+
+  transform:
+    scale(1.06);
+}
+
+
+/* ============================================================
+   17. Team Page
+============================================================ */
+
+.team-section .card {
+  height:
+    100%;
+
+  border:
+    1px solid var(--border-light);
+
+  border-radius:
+    var(--radius-md);
+
+  box-shadow:
+    var(--shadow-sm);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background-color var(--transition);
+}
+
+.team-section .card:hover {
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    var(--shadow-md);
+
+  background-color:
+    #fff8f0;
+}
+
+.team-section .card:hover .btn-waada {
+  background-color:
+    var(--waada-red);
+
+  color:
+    white;
+
+  border-color:
+    var(--waada-red);
+}
+
+/* ================================
+   Back to Gallery
+================================ */
+
+.back-to-gallery {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #963943;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  margin-bottom: 24px;
+
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-to-gallery:hover {
+  color: #6f2931;
+  transform: translateX(-3px);
+}
+
+.back-to-gallery::before {
+  content: "←";
+  font-size: 1.1rem;
+}
+
+/* ============================================================
+   18. Footer
+============================================================ */
+
+.footer-section {
+  padding:
+    3rem 0 1rem;
+
+  background-color:
+    var(--waada-red);
+
+  color:
+    white;
+
+  font-size:
+    0.9rem;
+}
+
+.footer-section a {
+  color:
+    white;
+}
+
+.designer-link {
+  color:
+    white;
+
+  text-decoration:
+    none;
 }
 
 .duan-brand {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-bottom: 2px solid white;
-  padding-bottom: 2px;
-  transition: color 0.4s ease, border-color 0.4s ease;
+  padding-bottom:
+    2px;
+
+  border-bottom:
+    2px solid white;
+
+  color:
+    white;
+
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size:
+    1rem;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    0.5px;
+
+  transition:
+    color 0.4s ease,
+    border-color 0.4s ease;
 }
 
 .duan-brand:hover {
-  color: gold; 
-  border-color: gold;
+  color:
+    gold;
+
+  border-color:
+    gold;
 }
 
-/* Social media icons using <img> and flex gap layout */
+
+/* Social Icons */
+
 .footer-section .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  gap:
+    20px;
 }
 
 .footer-section .social-icons img {
-  width: 32px;
-  height: 32px;
-  filter: brightness(0) invert(1); 
-  transition: transform 0.6s ease;
+  display:
+    block;
+
+  width:
+    32px;
+
+  height:
+    32px;
+
+  filter:
+    brightness(0)
+    invert(1);
+
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
 }
 
 .footer-section .social-icons img:hover {
-  transform: scale(1.15); 
+  transform:
+    scale(1.15);
+
+  opacity:
+    0.85;
 }
 
-/* ============================================
-   Responsible Interface
-============================================ */
+
+/* ============================================================
+   19. Tablet
+============================================================ */
+
+@media (max-width: 992px) {
+
+  .gallery-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+}
+
+
+/* ============================================================
+   20. Mobile
+============================================================ */
+
 @media (max-width: 768px) {
+
   .parallax-section {
-    background-attachment: scroll !important;
+    background-attachment:
+      scroll !important;
+
+    min-height:
+      42vh !important;
   }
 
   section.bg-light::before {
-    display: none;
+    display:
+      none;
   }
 
   .btn-waada,
   .btn-outline-secondary {
-    width: 100%;
+    width:
+      100%;
   }
 
-  .whispers-gallery{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+  .spotlight-text {
+    font-size:
+      1rem;
+
+    line-height:
+      1.75;
   }
+
+
+  /* CMS Gallery */
+
+ .gallery-grid {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
 }
 
-@media (max-width: 480px){
-  .whispers-gallery{
+  .gallery-grid .gallery-item {
+    margin-bottom:
+      14px;
+
+    border-radius:
+      10px;
+  }
+
+  .gallery-grid .gallery-item img {
+    border-radius:
+      10px;
+  }
+
+
+  /* Legacy Gallery */
+
+  .whispers-gallery {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap:
+      16px;
+  }
+
+
+  /* Main Gallery Cards */
+
+  .gallery-section .card-img-top {
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+  /* Lightbox */
+
+  .lightbox {
+    padding:
+      16px;
+  }
+
+  .lightbox-close {
+    top:
+      12px;
+
+    right:
+      12px;
+
+    width:
+      42px;
+
+    height:
+      42px;
+
+    font-size:
+      1.7rem;
+  }
+
+}
+
+
+/* ============================================================
+   21. Small Phones
+============================================================ */
+
+@media (max-width: 480px) {
+
+  .gallery-grid {
     grid-template-columns: 1fr;
     gap: 14px;
   }
+
+  .gallery-grid .gallery-item {
+    margin-bottom: 0;
+  }
+
+
+  .whispers-gallery {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      14px;
+  }
+
+
+  .poster-hero-overlay {
+    padding:
+      14px;
+  }
+
+  .poster-hero .poster-play {
+    font-size:
+      48px;
+  }
+
+}
+
+/* ============================================================
+   22. Reduced Motion Accessibility
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior:
+      auto !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+  }
+
 }
