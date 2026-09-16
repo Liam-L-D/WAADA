@@ -78,7 +78,7 @@
   <!-- ===================== Hero Section with Background Video and Overlay ===================== -->
   <header class="hero-video-section position-relative text-white text-center">
     <!-- Background video -->
-    <video autoplay muted loop playsinline
+    <video id="home-hero-video" autoplay muted loop playsinline
            class="position-absolute top-0 start-0 w-100 h-100"
            style="object-fit: cover; z-index: -2;">
       <source src="media/home.mp4" type="video/mp4">
@@ -91,7 +91,7 @@
 
     <!-- Foreground content -->
     <div class="container position-relative z-1 d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 75vh;">
-      <h1 class="display-3 fw-bold">Bridging Cultures. Inspiring Minds.<br>Empowering Creators.</h1>
+      <h1 id="home-hero-title" class="display-3 fw-bold">Bridging Cultures. Inspiring Minds.<br>Empowering Creators.</h1>
       <a class="btn btn-outline-light mt-4" href="about.html">Explore Our Mission</a>
     </div>
   </header>
@@ -105,10 +105,11 @@
     <div class="row justify-content-center">
       <div class="col-md-10 text-center">
 
-        <h2 class="fw-bold mb-4">
+        <h2 id="home-about-title" class="fw-bold mb-4">
           About WAADA
         </h2>
 
+        <div id="home-about-content">
         <p class="fs-5 lh-lg mb-4 text-start">
           The Washington Arts and Design Association (WAADA) is a nonprofit organization originating in Maryland, USA.
           Our platform advocates for the development of contemporary culture, art, and design.
@@ -124,6 +125,8 @@
           WAADA upholds the values of universal civilization, encourages free thought and new concepts,
           and shares creative works and forward-looking educational ideas.
         </p>
+
+        </div>
 
         <!-- Buttons -->
         <div class="d-flex flex-wrap justify-content-center gap-3">
@@ -146,10 +149,11 @@
 <section class="py-5 bg-light">
   <div class="container col-md-10 mx-auto">
 
-    <a href="gallery/kids-arts-day.html" class="poster-link">
+    <a id="home-spotlight-image-link" href="gallery/kids-arts-day.html" class="poster-link">
       <div class="poster-hero-wrap mb-5">
         <div class="poster-hero">
           <img
+            id="home-spotlight-image"
             src="images/gallery/kids-arts-day/kids_arts_day.webp"
             alt="Kids Arts Day – Ode to Spring in Gaithersburg, Maryland"
             class="poster-hero-img" decoding="async">
@@ -164,14 +168,14 @@
     <div class="row justify-content-center">
       <div class="col-md-10">
 
-        <h2 class="fw-bold text-center mb-2 waada-title-red">
+        <h2 id="home-spotlight-title" class="fw-bold text-center mb-2 waada-title-red">
           Kids Arts Day – Ode to Spring
         </h2>
-        <p class="text-center fs-5 mb-4 waada-body-blue">
+        <p id="home-spotlight-subtitle" class="text-center fs-5 mb-4 waada-body-blue">
           Celebrating Creativity, Community, and Childhood
         </p>
 
-        <div class="spotlight-text waada-body-blue">
+        <div id="home-spotlight-content" class="spotlight-text waada-body-blue">
 
           <p>
             On June 14, 2026, WAADA welcomed 24 children, ages 18 months to 5 years,
@@ -196,7 +200,7 @@
           </p>
 
           <div class="text-center">
-            <a href="gallery/kids-arts-day.html" class="btn btn-waada-outline px-4">
+            <a id="home-spotlight-link" href="gallery/kids-arts-day.html" class="btn btn-waada-outline px-4">
               View Event Gallery
             </a>
           </div>
@@ -217,7 +221,9 @@
   <div class="container position-relative z-2">
     <h2 class="text-center mb-4 fw-bold">Recent Initiatives</h2>
 
-    <div class="row text-center justify-content-center">
+    <div id="home-recent-initiatives" class="row text-center justify-content-center">
+
+      <!-- Static fallback cards: replaced by home-cms.js when CMS loads -->
 
       <!-- Card 1 : Kids Arts Day – Ode to Spring -->
       <div class="col-md-4 mb-4">
@@ -333,5 +339,6 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js" defer></script>
+  <script src="js/home-cms.js" defer></script>
 </body>
 </html>
